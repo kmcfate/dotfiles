@@ -3,4 +3,7 @@
 	url = https://github.com/TheLocehiliosan/yadm.git
 [submodule ".bash_it"]
 	path = .bash_it
-	url = /root/.bash_it/
+	url = https://github.com/Bash-it/bash-it.git
+[submodule ".linuxbrew/Homebrew"]
+	path = .linuxbrew/Homebrew
+	url = https://github.com/Linuxbrew/brew
