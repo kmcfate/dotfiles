@@ -1,3 +1,5 @@
 [user]
 	email = kmcfate@darkink.com
 	name = Kal McFate
+[push]
+	default = simple
