@@ -1,3 +1,6 @@
 [submodule ".yadm-project"]
 	path = .yadm-project
 	url = https://github.com/TheLocehiliosan/yadm.git
+[submodule ".bash_it"]
+	path = .bash_it
+	url = /root/.bash_it/
