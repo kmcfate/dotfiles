@@ -2,4 +2,6 @@
 cd "$HOME"
 
 echo "Init submodules"
-yadm submodule update --recursive --init --depth 1
+~/bin/yadm submodule update --recursive --init --depth 1
+
+echo 'You should run `. .bashrc` to set everything up.'
