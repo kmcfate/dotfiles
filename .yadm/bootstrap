@@ -1,7 +1,49 @@
 #!/bin/bash
 cd "$HOME"
 
-echo "Init submodules"
-~/bin/yadm submodule update --recursive --init --depth 1
+REPOS=(yadm bashit brew)
+
+declare -A REPODIR
+declare -A REPOURL
+
+REPODIR[yadm]=".yadm-project"
+REPOURL[yadm]="https://github.com/TheLocehiliosan/yadm.git"
+
+REPODIR[bashit]=".bash_it"
+REPOURL[bashit]="https://github.com/Bash-it/bash-it.git"
+
+REPODIR[brew]=".linuxbrew"
+REPOURL[brew]="https://github.com/Linuxbrew/brew.git"
+
+confirm()
+{
+  read -s -n 1 -p "${1}? "
+  REPLY=${REPLY,,}
+echo
+  [[ $REPLY == "y" ]] && return 0 || return 1
+}
+
+bootstrap()
+{
+  if [[ -f $1 ]]
+  then
+    echo "Running bootstrap from $1"
+    "$1"
+  fi
+}
+
+confirm "Clone all repos (${REPOS[*]})"
+CONFIRM=$?
+
+for REPO in ${REPOS[@]}
+do
+  if ! [[ -d "${REPODIR[$REPO]}" ]]
+  then
+    [[ $CONFIRM -eq 1 ]] && (confirm "Clone $REPO" || continue)
+    echo "Cloning $REPO from ${REPOURL[$REPO]} into ${REPODIR[$REPO]}"
+    git clone --depth=1 ${REPOURL[$REPO]} ${REPODIR[$REPO]}
+    bootstrap ".yadm/bootstrap.$REPO"
+  fi
+done
 
 echo 'You should run `. .bashrc` to set everything up.'
