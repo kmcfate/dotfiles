@@ -1,7 +1,9 @@
 #!/bin/bash
 cd "$HOME"
 
-REPOS=(yadm bashit brew)
+hash yum && sudo yum install -q -y bash-completion-extras
+
+REPOS=(yadm bashit brew dircolors)
 
 declare -A REPODIR
 declare -A REPOURL
@@ -14,6 +16,9 @@ REPOURL[bashit]="https://github.com/Bash-it/bash-it.git"
 
 REPODIR[brew]=".linuxbrew"
 REPOURL[brew]="https://github.com/Linuxbrew/brew.git"
+
+REPODIR[dircolors]=".solarized/dircolors-solarized"
+REPOURL[dircolors]="https://github.com/seebi/dircolors-solarized.git"
 
 confirm()
 {
@@ -46,4 +51,4 @@ do
   fi
 done
 
-echo 'You should run `. .bashrc` to set everything up.'
+echo 'You should run `. .bashrc` or log back in to set everything up.'

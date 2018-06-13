@@ -1,0 +1,9 @@
+#!/bin/bash
+PLUGINS="todo base ssh sshagent explain autojump"
+
+. $HOME/.bash_it/bash_it.sh
+
+for plugin in $PLUGINS
+do
+  bash-it enable plugin $plugin
+done
