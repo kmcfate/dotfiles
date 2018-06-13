@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export BASH_IT_CUSTOM="$HOME/.bash_it_custom"
+
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
 
