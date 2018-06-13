@@ -7,7 +7,10 @@ export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
+export BASH_IT_THEME='powerline-multiline'
+
+export POWERLINE_LEFT_PROMPT="user_info scm python_venv ruby cwd last_status"
+export POWERLINE_RIGHT_PROMPT="in_vim clock hostname"
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
