@@ -1,1 +1,11 @@
-.yadm/repo.git
+/.*
+/bin/yadm
+/.yadm/repo.git
+/Desktop
+/Documents
+/Downloads
+/Music
+/Pictures
+/Public
+/Templates
+/Video
