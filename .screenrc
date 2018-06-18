@@ -863,7 +863,7 @@ defbce on
 altscreen on
 
 # mouse focus
-mousetrack on
+# mousetrack on
 
 # Create layouts
 # create window
