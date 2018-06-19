@@ -1,5 +1,6 @@
-[user]
-	email = kmcfate@darkink.com
-	name = Kal McFate
 [push]
 	default = simple
+[core]
+	editor = vim
+[include]
+	path = .gitconfig.local
