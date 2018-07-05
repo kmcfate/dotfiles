@@ -239,6 +239,10 @@ set softtabstop=4              " tabstops of 8
 set shiftwidth=4                " indents of 8
 set list
 
+:autocmd Filetype ruby set tabstop=2
+:autocmd Filetype ruby set softtabstop=2
+:autocmd Filetype ruby set shiftwidth=2
+
 " uncold by default
 set foldlevel=99
 
