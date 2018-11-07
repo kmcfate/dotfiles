@@ -243,7 +243,13 @@ set list
 :autocmd Filetype ruby set softtabstop=2
 :autocmd Filetype ruby set shiftwidth=2
 
-" uncold by default
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\   exe "normal! g'\"" |
+\ endif
+
+" unfold by default
 set foldlevel=99
 
 "extras
