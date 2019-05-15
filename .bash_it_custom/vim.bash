@@ -1,2 +1,2 @@
 alias vi=vim
-EDITOR=vim
+export EDITOR=vim

@@ -1,3 +1,5 @@
+let g:skip_defaults_vim=1
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -104,7 +106,7 @@ Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-speeddating'
 
 " Generic Programming Support 
-Plugin 'jakedouglas/exuberant-ctags'
+"Plugin 'jakedouglas/exuberant-ctags'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
@@ -175,7 +177,7 @@ Plugin 'colepeters/spacemacs-theme.vim'
 Plugin 'dylanaraps/wal.vim'
 
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -238,6 +240,7 @@ set tabstop=4                   " tabstops of 8
 set softtabstop=4              " tabstops of 8
 set shiftwidth=4                " indents of 8
 set list
+set backspace=indent,eol,start
 
 :autocmd Filetype ruby set tabstop=2
 :autocmd Filetype ruby set softtabstop=2
@@ -273,3 +276,5 @@ set showbreak=↪\
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 set tags=./tags;$HOME
+
+set pastetoggle=<F10>
