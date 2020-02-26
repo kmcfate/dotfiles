@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[[ -f /etc/bashrc ]] && . /etc/bashrc
+
 export BASH_IT_CUSTOM="$HOME/.bash_it_custom"
 
 # Path to the bash it configuration
@@ -9,6 +11,9 @@ export BASH_IT="$HOME/.bash_it"
 # location /.bash_it/themes/
 export BASH_IT_THEME='powerline-multiline'
 
+if [ $SHLVL -gt 2 ]; then LVL=" SUBSHELL $SHLVL"; fi
+
+export POWERLINE_USER_INFO_SSH_CHAR="${LVL} "
 export POWERLINE_LEFT_PROMPT="user_info scm python_venv ruby cwd last_status"
 export POWERLINE_RIGHT_PROMPT="in_vim clock hostname"
 
@@ -56,7 +61,7 @@ export SCM_CHECK=true
 # Uncomment this to make Bash-it create alias reload.
 # export BASH_IT_RELOAD_LEGACY=1
 
-[[ -f "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
+[[ -f "$HOME/.bashrc.local" ]] && . "$HOME/.bashrc.local"
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
