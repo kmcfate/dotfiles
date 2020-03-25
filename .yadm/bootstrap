@@ -13,7 +13,7 @@ REPODIR[bashit]=".bash_it"
 REPOURL[bashit]="https://github.com/Bash-it/bash-it.git"
 
 REPODIR[brew]=".linuxbrew"
-REPOURL[brew]="https://github.com/Linuxbrew/brew.git"
+REPOURL[brew]="https://github.com/Homebrew/brew.git"
 
 REPODIR[dircolors]=".solarized/dircolors-solarized"
 REPOURL[dircolors]="https://github.com/seebi/dircolors-solarized.git"
