@@ -1,1 +1,1 @@
-PATH=~/bin:~/.toolbox/bin:$PATH
+PATH=~/bin:~/.local/bin:~/.toolbox/bin:$PATH
