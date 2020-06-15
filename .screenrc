@@ -218,7 +218,7 @@ escape ^aa
 ################## hostname | windowlist  | <padded right>   04:20:20pm 2006.04.27 date
 #  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%C:%s%a %Y.%m.%d %{bk}%100="
 ################## hostname | windowlist  | <padded right>   04:20pm 2006.04.27 date
-  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%C%a %Y.%m.%d %{bk}%100="
+  caption always "%0=%{+b rk}%H %{bk}| %0L=%{mk}%>%-Lw%{= BW}%n%f* %t%{-}%+Lw%L>%?(%u)%? %{bk}|%>%=%{Yk} %=%{+b rk}Load: %l %{-b gK}Cpu:%2` %{-b bK}Disk:%1` %{-b mK}Mem:%3` %{-b wK}%C%a %Y.%m.%d %{bk}%100="
 
 # emerge strokes the %h not the %t          :)
   hardstatus off
@@ -270,6 +270,9 @@ escape ^aa
 # hardstatus alwayslastline "%{rk}host: %H %33=%{yk}date: %M%d %66=%{gk}time: %c:%s%="
 # hardstatus alwayslastline "%{rk}host: %H %33=%{yk}date: %M%d %66=%{gk}time: %c%="
 #
+backtick 1 0 0 screen-disk-usage
+backtick 2 0 0 screen-cpu-usage
+backtick 3 0 0 screen-mem-usage
 # 030331 backtick is a new command in screen version >=3.9.15
 #
 # 030330 use the hardstatus line to show the:
@@ -857,8 +860,8 @@ setenv SSH_AUTH_SOCK "$HOME/tmp/ssh-auth-sock"
 
 # 256 colors
 attrcolor b ".I"
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm-noapp 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
 
 altscreen on
-term screen-256color
+term xterm-256color
