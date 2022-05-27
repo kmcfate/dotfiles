@@ -45,7 +45,7 @@ do
     [[ $CONFIRM -eq 1 ]] && (confirm "Clone $REPO" || continue)
     echo "Cloning $REPO from ${REPOURL[$REPO]} into ${REPODIR[$REPO]}"
     git clone --depth=1 ${REPOURL[$REPO]} ${REPODIR[$REPO]}
-    bootstrap ".yadm/bootstrap.$REPO"
+    bootstrap ".config/yadm/bootstrap.$REPO"
   fi
 done
 
