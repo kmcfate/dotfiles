@@ -16,6 +16,7 @@ if [ $SHLVL -gt 2 ]; then LVL=" SUBSHELL $SHLVL"; fi
 export POWERLINE_USER_INFO_SSH_CHAR="${LVL} "
 export POWERLINE_LEFT_PROMPT="user_info scm python_venv ruby cwd last_status"
 export POWERLINE_RIGHT_PROMPT="in_vim clock hostname"
+export POWERLINE_PROMPT_FOREGROUND_COLOR=15
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
