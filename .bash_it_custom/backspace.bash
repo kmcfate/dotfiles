@@ -1,1 +1,1 @@
-#stty erase '^?'
+stty erase '^?'
