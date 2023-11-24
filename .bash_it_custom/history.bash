@@ -1,5 +1,5 @@
 if [[ ${EUID} != 0 ]]; then
-    export HISTCONTROL=ignoredups
+    export HISTCONTROL="ignoredups:noauto"
 #    export HISTTIMEFORMAT="[%Y/%m/%d %H:%M:%S] "
     export HISTFILE=$HOME/.history/`hostname |cut -d '.' -f 1-3 || echo unknown`
     export HISTSIZE=1000000
