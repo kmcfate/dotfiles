@@ -62,7 +62,8 @@ export SCM_CHECK=true
 # Uncomment this to make Bash-it create alias reload.
 # export BASH_IT_RELOAD_LEGACY=1
 
-[[ -f "$HOME/.bashrc.local" ]] && . "$HOME/.bashrc.local"
-
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+[[ -f "$HOME/.bashrc.local" ]] && . "$HOME/.bashrc.local"
+
