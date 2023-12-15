@@ -1,5 +1,5 @@
 #!/bin/bash
-PLUGINS="todo base ssh sshagent explain autojump"
+PLUGINS="todo base ssh sshagent explain autojump direnv"
 
 . $HOME/.bashrc
 
