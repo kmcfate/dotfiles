@@ -8,5 +8,3 @@ if [[ ${EUID} != 0 ]]; then
     [ -d $HOME/.history ] || mkdir $HOME/.history
     [ -f $HISTFILE ] || echo >> $HISTFILE
 fi
-
-PROMPT_COMMAND="${PROMPT_COMMAND};history -a;history -c;history -r"
